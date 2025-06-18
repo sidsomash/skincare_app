@@ -1,8 +1,8 @@
 from fastapi import FastAPI
-from backend.routes.user import routes
+from routes.user import user_router
 
 app = FastAPI()
-app.include_router(users.router)
+app.include_router(user_router)
 
 @app.get("/")
 def root():

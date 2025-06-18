@@ -1,7 +1,6 @@
 from fastapi import APIRouter, HTTPException, status
-from backend.models.user.users import RegistrationRequest, LoginRequest
-from backend.auth import hash_password, verify_password, create_access_token
-
+from models.user.schemas import RegistrationRequest, LoginRequest
+from auth import hash_password, verify_password, create_access_token
 
 router = APIRouter()
 users = {}  # In-memory storage
